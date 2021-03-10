@@ -6,24 +6,28 @@ var patrick = {
 
 const MAYORIA_DE_EDAD = 18;
 
+//Funcion comun
+function esMayorDeEdad(persona) {
+    return persona.edad >= MAYORIA_DE_EDAD;
+}
 //Podemos asignar una funcion a una variable de la siguiente manera
 //la funcion asignada sera ahora una funcion anonima
-//var esMayorDeEdad = function (persona) {
-//    return persona.edad >= MAYORIA_DE_EDAD;
-//}
+var esMayorDeEdad = function (persona) {
+    return persona.edad >= MAYORIA_DE_EDAD;
+}
 
-//Otra forma de declararla y ahora es una arrow function
-//const esMayorDeEdad = (persona) => {
-//    return persona.edad >= MAYORIA_DE_EDAD;
-//}
+//Declaracion de una arrow function
+const esMayorDeEdad = (persona) => {
+    return persona.edad >= MAYORIA_DE_EDAD;
+}
 
-//JS nos permite ahorrar mas caracteres, cuando solo va a retornar
-//un valor podemos eliminar la palabra reservada return
+//JS nos permite ahorrar mas caracteres, cuando solo va a retornar un valor 
+//Podemos eliminar la palabra reservada return
 //tambien cuando solo se pide un parametro podemos eliminar los
 //parentesis del mismo quedando al final de la siguiente manera
-//const ES_MAYOR_DE_EDAD = persona => persona.edad >= MAYORIA_DE_EDAD
+const esMayorDeEdad = persona => persona.edad >= MAYORIA_DE_EDAD
 
-//Tambien podemos destructurar la funcion quedando asi
+//Tambien podemos destructurar, quedando asi
 const esMayorDeEdad = ({ edad }) => edad >= MAYORIA_DE_EDAD
 
 //function imprimirMayorDeEdad(persona) {
